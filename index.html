@@ -1,0 +1,315 @@
+<!doctype html><html lang="sk"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Jedna báseň · kaviareň pod Bojnickým zámkom — neoficiálny návrh</title>
+<meta name="description" content="Neoficiálny návrh webu kaviarne Jedna báseň v Bojniciach: káva, koláče, raňajky a pozvánky na kvízy, koncerty a workshopy.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%239B2F3F'/%3E%3Cpath d='M9 14h13v3c0 4-3 7-6.5 7S9 21 9 17z' fill='none' stroke='%236A1A28' stroke-width='1.8'/%3E%3C/svg%3E">
+<style>
+:root{
+  --night:#232B3B; --night2:#191F2D; --night3:#2E384C;
+  --paper:#F3F1EE; --paper2:#E6E3DF; --ink:#1F2430; --ink2:#525867;
+  --wax:#9B2F3F; --wax-d:#6C1F2D; --wax-dd:#4F1621; --wax-l:#E4A3AD;
+  --line:rgba(31,36,48,.18); --line-l:rgba(243,241,238,.22);
+  --disp:"Cinzel Decorative",Georgia,serif; --text:Alegreya,Georgia,serif;
+  --pad:clamp(16px,4vw,44px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font:400 19px/1.55 var(--text);color:var(--paper);background:var(--night)}
+svg,img{max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--wax-l);outline-offset:3px}
+.sheet :focus-visible{outline-color:var(--wax)}
+.wrap{max-width:1140px;margin:0 auto;padding:0 var(--pad)}
+.lab{font:500 13px/1.3 var(--text);letter-spacing:.2em;text-transform:uppercase}
+.n{font-variant-numeric:tabular-nums}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+.notice{background:var(--night2);color:#D9DCE4;font-size:15px;line-height:1.4;text-align:center;padding:9px var(--pad);border-bottom:1px solid var(--line-l)}
+
+header.top{background:var(--night);border-bottom:1px solid var(--line-l)}
+header.top .wrap{display:flex;align-items:center;gap:30px;min-height:74px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font:700 19px/1 var(--disp);letter-spacing:.02em;white-space:nowrap}
+.logo svg{width:34px;height:34px;flex:none}
+nav.main{margin-left:auto;display:flex;gap:30px}
+nav.main a{text-decoration:none;font-size:18px;padding:12px 0;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .2s}
+nav.main a:hover{background-size:100% 1px}
+.hd-tel{text-decoration:none;font:500 18px/1 var(--text)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;font:700 17px/1 var(--text);letter-spacing:.06em;text-decoration:none;background:var(--wax);color:#fff;border:1px solid var(--wax);border-radius:2px;transition:background .2s,color .2s,border-color .2s}
+.btn:hover{background:transparent;border-color:var(--wax-l);color:var(--wax-l)}
+.btn.ghost{background:transparent;border-color:var(--line-l);color:var(--paper)}
+.btn.ghost:hover{border-color:var(--wax-l);color:var(--wax-l)}
+.sheet .btn:hover{color:var(--wax);border-color:var(--wax)}
+.sheet .btn.ghost{color:var(--ink);border-color:var(--ink)}
+.sheet .btn.ghost:hover{background:var(--ink);color:var(--paper)}
+header.top .btn{min-height:44px;padding:0 20px}
+
+/* hero */
+.hero{background:radial-gradient(ellipse 60% 70% at 72% 52%,#3A4662 0%,transparent 70%),var(--night)}
+.hero .wrap{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(28px,5vw,72px);align-items:center;padding-top:clamp(36px,5vw,64px);padding-bottom:clamp(44px,6vw,80px);min-height:min(600px,82vh)}
+.hero .lab{color:var(--wax-l)}
+.lead{font:400 clamp(28px,3.4vw,42px)/1.22 var(--text);margin:18px 0 30px;max-width:19ch}
+.lead em{font-style:italic;color:var(--wax-l)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.facts{display:flex;flex-wrap:nowrap;gap:0;margin-top:40px;border-top:1px solid var(--line-l)}
+.facts div{padding:16px 16px 0 0;margin-right:16px;border-right:1px solid var(--line-l)}
+.facts div:last-child{border:0;margin:0}
+.facts b{display:block;font:500 26px/1.1 var(--text);font-variant-numeric:lining-nums tabular-nums}
+.facts b i{font-style:normal;color:var(--wax-l);font-size:.8em}
+.facts span{display:block;font-size:15px;color:#C4C9D4;margin-top:3px}
+
+/* obálka */
+.env{position:relative;width:100%;max-width:640px;margin-left:auto;aspect-ratio:6/5;container-type:inline-size;filter:drop-shadow(0 34px 34px rgba(8,11,20,.5))}
+.env>svg{position:absolute;inset:0;width:100%;height:100%;max-width:none}
+.env .seal{inset:auto;left:41%;top:66.5%;width:18%;height:auto;aspect-ratio:1;filter:drop-shadow(0 4px 4px rgba(30,5,10,.45))}
+.letter{position:absolute;left:8%;right:8%;top:11%;bottom:12%;background:var(--paper);color:var(--ink);text-align:center;padding:max(18px,5.6cqw) max(14px,5cqw) 0;transform:rotate(-.7deg);box-shadow:0 0 0 1px rgba(0,0,0,.07),0 -3px 10px rgba(0,0,0,.14)}
+.letter .lab{font-size:clamp(10px,1.9cqw,13px);color:var(--ink2);letter-spacing:.22em}
+.letter h1{font:700 clamp(25px,7.6cqw,50px)/1.1 var(--disp);color:var(--wax-d);margin:max(8px,2.2cqw) 0 max(9px,2.4cqw);letter-spacing:.01em}
+.letter hr{border:0;height:1px;width:46%;margin:0 auto max(10px,2.4cqw);background:linear-gradient(90deg,transparent,var(--wax),transparent)}
+.letter p{font:italic 400 clamp(15px,3.5cqw,22px)/1.35 var(--text);max-width:26ch;margin:0 auto}
+
+/* listy */
+main{padding:clamp(28px,4vw,48px) 0 10px}
+.sheet{background:var(--paper);color:var(--ink);padding:clamp(24px,4.4vw,60px);margin-bottom:clamp(30px,4vw,44px);box-shadow:0 7px 0 -3px #D8D4CE,0 14px 0 -6px #BCB7B1,0 26px 34px -18px rgba(5,8,16,.65);border-radius:2px;position:relative}
+.sheet h2{font:400 clamp(28px,4.4vw,54px)/1.1 var(--disp);color:var(--wax-d);letter-spacing:.01em}
+.sheet-h{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;padding-bottom:26px}
+.sheet-h p{max-width:36ch;color:var(--ink2);font-size:19px}
+.sdiv{display:flex;align-items:center;gap:14px;margin:0 0 34px}
+.sdiv::before,.sdiv::after{content:"";flex:1;height:1px;background:var(--line)}
+.sdiv svg{width:30px;height:30px;flex:none}
+.sdiv.l::before,.sdiv.l::after{background:var(--line-l)}
+
+.strofy{display:grid;grid-template-columns:repeat(3,1fr);gap:40px clamp(28px,4vw,56px)}
+.str.w2{grid-column:span 2}
+.str h3{font:500 14px/1.3 var(--text);letter-spacing:.2em;text-transform:uppercase;color:var(--wax);padding-bottom:12px;margin-bottom:6px;border-bottom:1px solid var(--line)}
+.str ul{list-style:none}
+.str li{padding:8px 0;font-size:21px;line-height:1.3}
+.str li+li{border-top:1px dotted var(--line)}
+.str li small{display:block;font-size:16px;color:var(--ink2);font-style:italic;margin-top:1px}
+.str.w2 ul{columns:2;column-gap:clamp(28px,4vw,56px)}
+.str.w2 li{break-inside:avoid}
+.str.w2 li:nth-child(n){border-top:1px dotted var(--line)}
+.str.w2 li:first-child,.str.w2 li:nth-child(4){border-top:0}
+.srcnote{margin-top:38px;padding-top:18px;border-top:1px solid var(--line);font-size:16px;color:var(--ink2);max-width:80ch}
+.srcnote a{color:var(--wax)}
+
+/* pozvánky */
+.sheet.wine{background:var(--wax-d);color:var(--paper);box-shadow:0 7px 0 -3px #57182A,0 14px 0 -6px #3F1120,0 26px 34px -18px rgba(5,8,16,.65)}
+.sheet.wine h2{color:#fff}
+.sheet.wine .sheet-h p{color:#E9D3D7}
+.sheet.wine :focus-visible{outline-color:#fff}
+.inv{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.card{grid-column:span 2;position:relative;padding:28px 24px 22px;border:1px solid rgba(243,241,238,.34);outline:1px solid rgba(243,241,238,.18);outline-offset:-7px}
+.card.big{grid-column:span 4;padding:34px 34px 28px}
+.card h3{font:400 21px/1.2 var(--disp);color:#fff;letter-spacing:.02em;margin-bottom:10px}
+.card.big h3{font-size:clamp(24px,2.6vw,32px)}
+.card p{color:#EBD9DC;font-size:18px;line-height:1.4}
+.card blockquote{font:italic 400 clamp(21px,2.3vw,28px)/1.3 var(--text);color:#fff;margin:4px 0 14px}
+.card .src{display:block;margin-top:14px;font:500 12.5px/1.3 var(--text);letter-spacing:.16em;text-transform:uppercase;color:var(--wax-l)}
+.wine .srcnote{border-color:var(--line-l);color:#E9D3D7}
+.wine .srcnote a{color:#fff}
+.wine .srcnote b{color:#fff}
+
+/* kontakt */
+.kon{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,6vw,80px);margin-top:10px}
+.kon .addr{font:400 clamp(26px,3vw,36px)/1.25 var(--text);margin:14px 0 26px}
+.kon .addr span{display:block;font-style:italic;color:var(--ink2);font-size:.62em;margin-top:6px}
+dl.info{display:grid;grid-template-columns:120px 1fr}
+dl.info dt,dl.info dd{padding:14px 0;border-top:1px solid var(--line)}
+dl.info dt{font:500 13px/1.75 var(--text);letter-spacing:.18em;text-transform:uppercase;color:var(--ink2)}
+dl.info dt:last-of-type,dl.info dd:last-of-type{border-bottom:1px solid var(--line)}
+dl.info a{font-weight:700;text-underline-offset:3px}
+dl.info small{display:block;font-size:16px;color:var(--ink2);margin-top:2px}
+.bigtel{display:block;font:500 clamp(36px,4.6vw,56px)/1.05 var(--text);letter-spacing:.01em;text-decoration:none;margin:10px 0 6px;font-variant-numeric:lining-nums tabular-nums;color:var(--wax-d)}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+
+footer{background:var(--night2);color:#C4C9D4;padding:32px 0 38px;font-size:16px;margin-top:40px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+footer b{font:700 18px/1 var(--disp);color:#fff}
+footer a{color:var(--wax-l)}
+
+.mbar{display:none}
+@media(max-width:980px){
+  nav.main{display:none}.hd-tel{margin-left:auto}
+  .hero .wrap{grid-template-columns:1fr}
+  .env{margin:0 auto}
+  .strofy{grid-template-columns:1fr 1fr}
+  .str.w2{grid-column:span 2}
+  .inv{grid-template-columns:1fr 1fr}.card,.card.big{grid-column:span 1}.card.big{grid-column:span 2}
+  .kon{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  body{font-size:18px;padding-bottom:calc(68px + env(safe-area-inset-bottom))}
+  header.top .wrap{gap:12px;min-height:64px}
+  .logo{font-size:16px;gap:10px}.logo svg{width:30px;height:30px}
+  .hd-tel{display:none}
+  header.top .btn{margin-left:auto;padding:0 16px}
+  .hero .wrap{padding-top:30px}
+  .hl{display:contents}.hl .lab{order:1}.hl .lead{order:2;margin-bottom:26px}.env{order:3}.hl .cta-row{order:4;margin-top:34px}.hl .facts{order:5}
+  .hero .wrap{gap:0}
+  .cta-row .btn{flex:1 1 100%}
+  .facts div{padding-right:16px;margin-right:16px}.facts b{font-size:24px}
+  .strofy{grid-template-columns:1fr}.str.w2{grid-column:auto}.str.w2 ul{columns:1}
+  .str.w2 li:nth-child(4){border-top:1px dotted var(--line)}
+  .inv{grid-template-columns:1fr}.card,.card.big{grid-column:auto;padding:26px 22px 20px}
+  dl.info{grid-template-columns:1fr}
+  dl.info dt{border-bottom:0;padding-bottom:0}dl.info dd{border-top:0;padding-top:2px}
+  .links .btn{width:100%}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;gap:1px;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--night2);border-top:1px solid var(--line-l);padding-bottom:env(safe-area-inset-bottom)}
+  .mbar a{display:flex;align-items:center;justify-content:center;min-height:56px;text-decoration:none;font:700 17px/1 var(--text);letter-spacing:.06em;color:var(--paper)}
+  .mbar a:first-child{background:var(--wax);color:#fff}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+ <defs>
+  <radialGradient id="wx" cx=".36" cy=".3" r=".85"><stop offset="0" stop-color="#C8495D"/><stop offset=".55" stop-color="#9B2F3F"/><stop offset="1" stop-color="#6A1A28"/></radialGradient>
+  <g id="cup" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M44 57h32v8c0 10-7 17-16 17s-16-7-16-17z"/><path d="M76 61h3a6.5 6.5 0 0 1 0 13h-4.5"/><path d="M37 88h46"/><path d="M54 49c-4-5 4-7 0-13M66 49c-4-5 4-7 0-13"/></g>
+  <symbol id="seal" viewBox="0 0 120 120">
+   <path d="M114.9 60.0 L113.1 65.2 L109.0 69.8 L105.9 73.9 L105.3 78.8 L105.0 84.1 L103.3 88.9 L97.6 90.8 L92.5 92.5 L88.5 94.8 L86.7 100.0 L84.8 106.5 L80.7 109.9 L75.3 110.3 L69.6 108.5 L64.8 108.6 L60.0 110.8 L54.8 112.6 L49.9 110.9 L46.1 106.0 L43.0 101.1 L38.6 100.1 L32.7 100.9 L26.4 101.0 L22.8 97.2 L21.3 91.8 L19.3 87.2 L15.9 83.6 L10.8 80.4 L7.9 75.8 L9.3 70.1 L12.8 64.6 L15.3 60.0 L13.6 55.4 L10.9 50.2 L10.0 44.8 L12.5 40.3 L17.4 37.2 L19.7 33.1 L20.5 27.6 L21.7 21.7 L25.0 17.3 L31.5 17.4 L37.6 18.1 L42.6 17.9 L46.0 14.0 L50.1 10.0 L55.0 9.3 L60.0 10.8 L64.6 13.7 L69.3 13.1 L75.1 10.2 L81.1 9.1 L85.8 11.8 L88.3 17.7 L90.2 23.3 L93.4 26.6 L98.0 28.8 L102.9 31.4 L104.3 36.3 L103.2 42.1 L103.8 46.7 L106.8 50.7 L112.1 54.9Z" fill="url(#wx)"/>
+   <circle cx="60" cy="60" r="41" fill="none" stroke="#5A1421" stroke-opacity=".55" stroke-width="2"/>
+   <circle cx="60" cy="60" r="38.5" fill="none" stroke="#F0A0AC" stroke-opacity=".28" stroke-width="1"/>
+   <use href="#cup" stroke="#F0A0AC" stroke-opacity=".38" transform="translate(.9 .9)"/>
+   <use href="#cup" stroke="#5A1421" stroke-opacity=".85"/>
+  </symbol>
+ </defs>
+</svg>
+
+<div class="notice" role="note">Neoficiálny návrh — nie je to oficiálny web podniku · ukážka od webdavid.sk, objednávky ani rezervácie tu nefungujú</div>
+
+<header class="top">
+ <div class="wrap">
+  <a class="logo" href="#" aria-label="Jedna báseň — hore"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#seal"/></svg>Jedna báseň</a>
+  <nav class="main" aria-label="Hlavná navigácia"><a href="#nabidka">Čo u nás nájdete</a><a href="#pozvanky">Pozvánky</a><a href="#kontakt">Kontakt</a></nav>
+  <a class="hd-tel n" href="tel:+421905191360">0905 191 360</a>
+  <a class="btn" href="tel:+421905191360">Zavolať</a>
+ </div>
+</header>
+
+<section class="hero">
+ <div class="wrap">
+  <div class="hl">
+   <span class="lab">Kaviareň · Bojnice</span>
+   <p class="lead">Káva, koláče a raňajky <em>priamo pod zámkom.</em></p>
+   <div class="cta-row"><a class="btn" href="tel:+421905191360">Zavolať do kaviarne</a><a class="btn ghost" href="#nabidka">Čo u nás nájdete</a></div>
+   <div class="facts">
+    <div><b>4,8<i> ★</i></b><span>Google · 371 hodnotení</span></div>
+    <div><b>100 %</b><span>odporúča FB (13)</span></div>
+    <div><b>1,5K</b><span>na FB</span></div>
+   </div>
+  </div>
+
+  <div class="env">
+   <svg viewBox="0 0 600 500" aria-hidden="true">
+    <rect x="0" y="172" width="600" height="328" fill="#CFC8BE"/>
+    <rect x="14" y="172" width="572" height="314" fill="#5A1D2A"/>
+    <path d="M0 172L300 8 600 172Z" fill="#CFC8BE"/>
+    <path d="M22 172L300 34 578 172Z" fill="#6E2433"/>
+    <path d="M60 172L300 52 540 172M100 172L300 70 500 172" fill="none" stroke="#fff" stroke-opacity=".08" stroke-width="1.5"/>
+   </svg>
+   <div class="letter">
+    <div class="lab">Zámok a okolie · Bojnice</div>
+    <h1>Jedna báseň</h1>
+    <hr>
+    <p>Kaviareň v zámockom parku, priamo pod Bojnickým zámkom.</p>
+   </div>
+   <svg viewBox="0 0 600 500" aria-hidden="true">
+    <defs>
+     <linearGradient id="pk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EAE5DD"/><stop offset="1" stop-color="#D5CEC3"/></linearGradient>
+     <filter id="bl" x="-5%" y="-5%" width="110%" height="110%"><feGaussianBlur stdDeviation="5"/></filter>
+    </defs>
+    <path d="M0 168L300 388 600 168" fill="none" stroke="#000" stroke-opacity=".32" stroke-width="10" filter="url(#bl)"/>
+    <path d="M0 172L300 392 600 172V500H0Z" fill="url(#pk)" stroke="#B2AA9E" stroke-width="1.5"/>
+    <path d="M0 500L190 352M600 500L410 352" stroke="#000" stroke-opacity=".08" stroke-width="1.5" fill="none"/>
+   </svg>
+   <svg class="seal" viewBox="0 0 120 120" role="img" aria-label="Rozlomená voskova pečať s šálkou kávy">
+    <use href="#seal"/>
+    <path d="M55 4L61 26 52 42 63 58 54 77 62 97 56 116" fill="none" stroke="#2A0A11" stroke-width="2.4" stroke-linejoin="round"/>
+    <path d="M57 4L63 26 54 42 65 58 56 77 64 97 58 116" fill="none" stroke="#F0A0AC" stroke-opacity=".3" stroke-width="1"/>
+   </svg>
+  </div>
+ </div>
+</section>
+
+<main class="wrap">
+
+<section class="sheet" id="nabidka">
+ <div class="sheet-h">
+  <h2>Čo u nás nájdete</h2>
+  <p>Káva, domáce sladké a raňajky z lokálnych surovín — podľa dostupných zdrojov o kaviarni.</p>
+ </div>
+ <div class="sdiv" aria-hidden="true"><svg viewBox="0 0 120 120"><use href="#seal"/></svg></div>
+ <div class="strofy">
+  <div class="str"><h3>Káva</h3><ul>
+   <li>Talianska pražená káva Barbera zo Sicílie<small>stredné praženie</small></li>
+   <li>Špeciálna single-origin káva</li>
+   <li>Bezkofeínová káva</li>
+   <li>Rastlinné a bezlaktózové mlieka</li></ul></div>
+  <div class="str"><h3>Čaje a nápoje</h3><ul>
+   <li>Bylinkové čaje od slovenských bylinkárov</li>
+   <li>Slovenské džúsy a vody</li>
+   <li>Limonády</li></ul></div>
+  <div class="str"><h3>Raňajky a pečivo</h3><ul>
+   <li>Raňajky z lokálnych surovín</li>
+   <li>Kváskový chlieb pečený na mieste</li></ul></div>
+  <div class="str w2"><h3>Sladké</h3><ul>
+   <li>Bezlepkový jablkový koláč</li>
+   <li>Tiramisu<small>jahoda, pistácia, citrón</small></li>
+   <li>Chia pudingy so sezónnym ovocím</li>
+   <li>Torty od miestnych pekárok</li>
+   <li>Domáce dezerty a pečivo</li></ul></div>
+  <div class="str"><h3>Terasa</h3><ul>
+   <li>Vonkajšia terasa s výhľadom na zámok<small>v teplejších mesiacoch</small></li></ul></div>
+ </div>
+ <p class="srcnote">Ponuka podľa článku na <a href="https://kavickari.sk/kaviaren-pod-bojnickym-zamkom-jedna-basen-je-plna-chutnych-versov/" target="_blank" rel="noopener">kavickari.sk</a> (15. 8. 2025) a <a href="https://bojnice.eu/tour/kaviaren-jedna-basen/" target="_blank" rel="noopener">bojnice.eu</a>. Ceny v ukážke neuvádzame — aktuálnu ponuku si overte v kaviarni.</p>
+</section>
+
+<section class="sheet wine" id="pozvanky">
+ <div class="sheet-h">
+  <h2>Pozvánky</h2>
+  <p>Kaviareň nie je len o káve. Podľa dostupných zdrojov sa tu organizujú aj podujatia.</p>
+ </div>
+ <div class="sdiv l" aria-hidden="true"><svg viewBox="0 0 120 120"><use href="#seal"/></svg></div>
+ <div class="inv">
+  <article class="card big">
+   <h3>Kvízy</h3>
+   <blockquote>„Kvíz, na ktorom sa nemusíš báť, že nebudeš vedieť! …“</blockquote>
+   <span class="src">Z ich príspevku na Facebooku · 22. 9. 2026</span>
+  </article>
+  <article class="card"><h3>Koncerty</h3><p>Večery s hudbou.</p><span class="src">visitbojnice.sk</span></article>
+  <article class="card"><h3>Workshopy</h3><p>Maliarske workshopy a akvarelový kurz.</p><span class="src">kavickari.sk</span></article>
+  <article class="card"><h3>A ďalšie</h3><p>Čítací klub, cestovateľské kino, výstavy.</p><span class="src">kavickari.sk</span></article>
+  <article class="card"><h3>Rezervácie</h3><p>Akcie sa rezervujú telefonicky na <span class="n">0905 191 360</span>. Konkrétne termíny tu zámerne neuvádzame.</p><span class="src">podľa zdrojov</span></article>
+ </div>
+</section>
+
+<section class="sheet" id="kontakt">
+ <div class="sheet-h"><h2>Kontakt</h2><p>Domček pri zámku v Bojniciach. Rezervácie akcií prebiehajú telefonicky.</p></div>
+ <div class="sdiv" aria-hidden="true"><svg viewBox="0 0 120 120"><use href="#seal"/></svg></div>
+ <div class="kon">
+  <div>
+   <span class="lab" style="color:var(--wax)">Adresa</span>
+   <p class="addr">Zámok a okolie<br>972 01 Bojnice<span>domček pred zámkom</span></p>
+   <span class="lab" style="color:var(--wax)">Zavolajte nám</span>
+   <a class="bigtel" href="tel:+421905191360">0905 191 360</a>
+   <div class="links"><a class="btn" href="tel:+421905191360">Zavolať</a><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Jedna+b%C3%A1se%C5%88+Z%C3%A1mok+a+okolie+Bojnice" target="_blank" rel="noopener">Navigovať na mape</a></div>
+  </div>
+  <dl class="info">
+   <dt>Hodiny</dt><dd><strong>Overiť.</strong> Jeden katalóg (bojnice.oma.sk) uvádza Ne–Št 8:00–19:00, Pi–So 8:00–21:00; iné zdroje hodiny neuvádzajú.</dd>
+   <dt>Instagram</dt><dd><a href="https://www.instagram.com/jedna.basen.bojnice/" target="_blank" rel="noopener">@jedna.basen.bojnice</a></dd>
+   <dt>Facebook</dt><dd><a href="https://www.facebook.com/profile.php?id=100095105127466" target="_blank" rel="noopener">Jedna báseň</a><small>1,5K sledovateľov · 100 % odporúča (13)</small></dd>
+   <dt>Google</dt><dd>4,8 ★ · 371 hodnotení</dd>
+  </dl>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap"><b>Jedna báseň</b><span>Neoficiálny návrh webu · <a href="https://webdavid.sk" rel="noopener">webdavid.sk</a> · 2026</span></div>
+</footer>
+
+<nav class="mbar" aria-label="Rýchle akcie"><a href="tel:+421905191360">Zavolať</a><a href="https://www.instagram.com/jedna.basen.bojnice/" target="_blank" rel="noopener">Instagram</a></nav>
+</body></html>
